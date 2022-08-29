@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+}
+
+.heading {
+    text-align: left;
+    width: 100%;
+}
+
+.heading button {
+    float: right;
+}
+
+.modal-dialog {
+    width: 90%;
+}
+
+h4 {
+    background-color: aquamarine;
+    margin: 0px;
+    line-height: 2;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.ol {
+    text-align: left;
+    font-weight: bold;
+}
