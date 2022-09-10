@@ -22,14 +22,23 @@ var ball = {
 }
 
 function setup(){
-  var canvas =  createCanvas(700,600);
+  canvas =  createCanvas(700,600);
+  canvas.parent('canvas');
+	//instializeInSetup(ball);
+	video = createCapture(VIDEO);
+	video.hide();
+	video.center();
+  poseNet = ml5.poseNet('pose', modelLoaded)
 }
-
+function modelLoaded(){
+  console.log("Model is loaded");
+  poseNet.on(video, getPoses);
+}
 
 function draw(){
 
  background(0); 
-
+image(video, 0, 0, 700, 600);
  fill("black");
  stroke("black");
  rect(680,0,20,700);
